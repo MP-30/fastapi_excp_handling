@@ -11,6 +11,7 @@ from app.exceptions import APIException
 
 async def api_exception_handler(request: Request, exc: APIException):
     
+    # TODO: do not make this hardcode . use schemas 
     problem_details = {
         "status": exc.status_code,
         "detail": exc.detail,

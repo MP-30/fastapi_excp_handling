@@ -18,7 +18,7 @@ from fastapi import HTTPException
 
 models.Base.metadata.create_all(bind=engine)
 
-app = FastAPI()
+app = FastAPI(debug=True)
 
 register_exception_handlers(app)
 
